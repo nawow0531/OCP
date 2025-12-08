@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-argocd
+  labels:
+    app: hello-argocd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-argocd
+  template:
+    metadata:
+      labels:
+        app: hello-argocd
+    spec:
+      containers:
+      - name: web
+        image: docker.io/library/nginx:1.27-alpine
+        ports:
+        - containerPort: 80
+        env:
+        - name: MESSAGE
+          value: "Hello ArgoCD from OCP!"
+

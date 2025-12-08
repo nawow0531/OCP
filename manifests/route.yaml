@@ -1,0 +1,11 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: hello-argocd
+spec:
+  to:
+    kind: Service
+    name: hello-argocd
+  port:
+    targetPort: 80
+
