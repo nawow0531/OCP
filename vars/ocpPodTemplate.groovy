@@ -1,6 +1,7 @@
 def call(Closure body) {
   podTemplate(
-    cloud: 'openshift',
+    cloud: 'OCP',
+    namespace: 'jenkins',
     serviceAccount: 'jenkins',
     containers: [
       containerTemplate(
@@ -16,4 +17,3 @@ def call(Closure body) {
     }
   }
 }
-
