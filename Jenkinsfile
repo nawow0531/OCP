@@ -1,4 +1,4 @@
-i@Library('ocp-lib') _
+@Library('ocp-lib') _
 
 ocpPodTemplate {
   stage('Login') {
