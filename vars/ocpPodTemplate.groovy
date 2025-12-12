@@ -3,6 +3,7 @@ def call(Closure body) {
     cloud: 'OCP',
     namespace: 'jenkins',
     serviceAccount: 'jenkins',
+    jnlpImage: 'bastion.bccard.local:5000/jenkins/ose-jenkins-agent-base:4.12',
     containers: [
       containerTemplate(
         name: 'oc',
