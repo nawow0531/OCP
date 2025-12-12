@@ -20,8 +20,8 @@ spec:
         image: docker.io/library/nginx:1.27-alpine
         ports:
         - containerPort: 80
-        serviceAccount: test
-        serviceAccountName: test
+      serviceAccount: test
+      serviceAccountName: test
         env:
         - name: MESSAGE
           value: "Hello ArgoCD from OCP!"
